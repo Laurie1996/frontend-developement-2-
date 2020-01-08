@@ -1,0 +1,852 @@
+html {
+    scroll-behavior: smooth;
+
+
+}
+
+/*smooth scroll bron https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_smooth_scroll*/
+
+/* scrollbar https://css-tricks.com/almanac/properties/s/scrollbar/ */
+/* fade in bron https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/*/
+
+/* Bron cv tijdlijn https://codepen.io/tutsplus/pen/QNeJgR */
+
+body {
+    width: 100vw;
+    animation: fadeInAnimation ease 2s animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: #141413;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+main {
+    position: relative;
+}
+
+
+
+.navcontainer {
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 2;
+
+}
+
+
+.navcontainer a {
+    text-decoration: none;
+    color: white;
+    line-height: 1.2;
+    font-size: 1.0em;
+
+}
+
+.navcontainer ul li {
+    list-style: none;
+}
+
+
+.logo {
+    height: 10vh;
+    padding-left: 3vw;
+}
+
+.nav{
+    width: 50vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+
+.change {
+    right: 0;
+}
+
+.hamburger-menu {
+    width: 25px;
+    height: 30px;
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.8s;
+}
+
+.change .line-1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line-2 {
+    opacity: 0;
+}
+
+.change .line-3 {
+    transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.nav-item {
+    list-style: none;
+    padding-top: 4vmin;
+    padding-bottom: 4vmin;
+    font-size: 1.3em;
+
+
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 3px 0;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-link::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+.nav-link::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.nav-link:active:before,
+.nav-link:active::after {
+    transform: scaleX(1);
+}
+
+
+
+
+/*MEDIA QUERY NAAR TABLET*/
+/*MEDIA QUERY NAAR TABLET*/
+/*MEDIA QUERY NAAR TABLET*/
+/*MEDIA QUERY NAAR TABLET*/
+
+@media (min-width:40em) {
+    main {
+        position: relative;
+    }
+
+
+    .logo {
+
+        width: 13vmin;
+        height: 8vmin;
+        align-self: center;
+        margin-left: 3vw;
+
+    }
+
+
+    .nav {
+        width: 80vw;
+        height: 10vh;
+        right: 0;
+        top: 0;
+        background-color: #1C00ff00;
+
+
+    }
+
+    .nav-list {
+        font-size: 0.8em;
+        width: 70vw;
+        display: flex;
+        justify-content: space-around;
+
+
+    }
+
+    .hamburger-menu {
+        right: -50%;
+    }
+
+    .nav-link:hover:before,
+    .nav-link:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+
+/*einde media query */
+/*einde media query */
+/*einde media query */
+/*einde media query */
+
+
+#sectie {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+
+#sectie ul {
+    width: 100vw;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 0.8em;
+    position: absolute;
+    top: 45%;
+    bottom: 0;
+    display: flex;
+
+
+}
+
+img[alt*="snow"] {
+    width: 100vw;
+    height: 95vh;
+    background-color: black;
+    opacity: 1;
+    position: relative;
+
+}
+
+
+img[alt*="logo5"] {
+    position: absolute;
+    width: 25vw;
+    height: 23vh;
+    top: 20%;
+    bottom: 0;
+
+
+}
+
+@media (min-width:20em) {
+
+    img[alt*="logo5"] {
+        position: absolute;
+        width: 28vw;
+        height: 20vh;
+        top: 10%;
+        bottom: 0;
+
+
+    }
+
+    @media (min-width:40em) {
+
+        img[alt*="logo5"] {
+            position: absolute;
+            width: 22vw;
+            height: 27vh;
+            top: 10%;
+            bottom: 0;
+
+
+        }
+
+        @media (min-width:60em) {
+
+
+            img[alt*="logo5"] {
+                position: absolute;
+                width: 23vw;
+                height: 32vh;
+                top: 10%;
+                bottom: 0;
+
+
+            }
+        }
+
+        @media (min-width:70em) {
+
+
+            img[alt*="logo5"] {
+                position: absolute;
+                width: 18vw;
+                height: 35vh;
+                top: 10%;
+                bottom: 0;
+
+
+            }
+        }
+
+
+
+        #sectie1 {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #sectie1 h2 {
+            font-size: 1.5em;
+            margin-top: 9vh;
+            margin-bottom: 4vh;
+            color: black;
+            font-weight: normal;
+
+
+
+        }
+
+
+        .animation {
+            margin: 0 auto;
+            background-color: white;
+            animation-name: stretch;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-direction: alternate;
+            animation-iteration-count: once;
+            animation-fill-mode: none;
+            animation-play-state: running;
+
+        }
+
+        @keyframes stretch {
+            0% {
+                transform: scale(.3);
+                background-color: white;
+            }
+
+            100% {
+                transform: scale(1.0);
+                background-color: white;
+
+
+            }
+        }
+
+        #sectie1 p {
+            /*text over mij*/
+            color: black;
+            font-weight: lighter;
+            line-height: 1.3;
+            font-size: 1em;
+            text-align: center;
+
+        }
+
+        #sectie1 article:first-of-type {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50vw;
+            background-color: white;
+
+        }
+
+        /*button Read more */
+        .read {
+            background-color: black;
+            color: white;
+            font-size: 0.8em;
+            padding: 1vmin;
+            margin: 6vh;
+            border-radius: 25px;
+
+            width: 40vw;
+            box-shadow:
+                1px 1px #6d6d6d,
+                2px 2px #949494,
+
+                -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+        }
+
+        .read:active {
+            box-shadow:
+                1px 1px #ffffff,
+                2px 2px #ffffff,
+                4px 4px #ffffff;
+            -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+
+
+        }
+
+        /*MEDIA QUERY NAAR TABLET*/
+        /*MEDIA QUERY NAAR TABLET*/
+        /*MEDIA QUERY NAAR TABLET*/
+        /*MEDIA QUERY NAAR TABLET*/
+
+
+
+        @media (min-width:40em) {
+
+            #sectie1 p {
+                animation-duration: 3s;
+                animation-name: slidein;
+                animation-iteration-count: once;
+            }
+
+            @keyframes slidein {
+                from {
+                    margin-left: 100%;
+                    width: 300%;
+                }
+
+                to {
+                    margin-left: 0%;
+                    width: 100%;
+                }
+            }
+
+
+
+            .read {
+                background-color: black;
+                color: white;
+                font-size: 1.0em;
+                margin: 10vh;
+                padding: 1vmin;
+                border-radius: 25px;
+                width: 200px;
+                box-shadow:
+                    1px 1px #6d6d6d,
+                    2px 2px #949494,
+                    3px 3px #949494;
+                -webkit-transform: translateX(-3px);
+                transform: translateX(-3px);
+            }
+
+            .read:hover {
+                box-shadow:
+                    1px 1px #ffffff,
+                    2px 2px #ffffff,
+                    4px 4px #ffffff;
+                -webkit-transform: translateX(4px);
+                transform: translateX(4px);
+
+
+            }
+        }
+
+
+
+
+
+
+        /*einde media query */
+        /*einde media query */
+        /*einde media query */
+        /*einde media query */
+
+
+        /*einde sectie 1 */
+
+
+
+        .achtergrondkleur {
+            background-color: black;
+        }
+
+
+        .animation2 h2 {
+
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding-top: 4vh;
+            padding-bottom: 4vh;
+            font-weight: normal;
+
+        }
+
+        .animation2 {
+            margin: 0 auto;
+            animation-name: stretch2;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-ease-in-out;
+            animation-delay: 0;
+            animation-direction: alternate;
+            animation-iteration-count: once;
+            animation-fill-mode: none;
+            animation-play-state: running;
+
+
+        }
+
+        @keyframes stretch2 {
+            0% {
+                transform: scale(.3);
+                background-color: black;
+
+            }
+
+            100% {
+                transform: scale(1.0);
+                background-color: black;
+            }
+        }
+
+        #sectie2 {
+            /*grid met mijn werk items */
+            background-color: black;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100vw;
+
+        }
+
+
+        /*#sectie2 article:nth-child(7) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}*/
+
+        #sectie2 article {
+            position: relative;
+            margin: 20px;
+
+        }
+
+        #sectie2 a {
+
+            text-decoration: none;
+            color: black;
+        }
+
+        .overlay {
+            position: absolute;
+            background-color: white;
+            top: 70%;
+            bottom: 10%;
+            left: 0;
+            right: 30%;
+            opacity: 1;
+            box-shadow: 10px 12px 0.5rem rgba(0, 0, 0, 0.5);
+
+        }
+
+        .overlay a h3 {
+            position: absolute;
+            color: black;
+            font-size: 1.0em;
+            font-weight: lighter;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+
+
+        img[alt*="pro"] {
+            width: 42vw;
+            height: 23vh;
+
+
+        }
+
+
+
+
+
+        @media (min-width:20em) {}
+
+
+
+
+
+
+
+        /*begin media query!! */
+        /*begin media query!! */
+        /*begin media query!! */
+        /*begin media query!! */
+
+
+
+        @media (min-width:40em) {
+
+
+            #sectie2 {
+                /*flexbox met mijn werk items */
+
+                background-color: aqua;
+                display: flex;
+                flex-wrap: wrap;
+
+
+            }
+
+            *h3 {
+                margin-top: 2em;
+                position: absolute;
+                padding: .675em;
+                font-weight: bold;
+                color: white;
+                background-color: red;
+
+            }
+
+
+            img[alt*="pro"] {
+                width: 20vw;
+                height: 30vh;
+            }
+
+
+            img[alt*="opdracht"] {
+                width: 30vw;
+                height: 20vh;
+            }
+
+        }
+
+
+        /*einde media query */
+        /*einde media query */
+        /*einde media query */
+        /*einde media query */
+
+        /*PAGINA WHO AM I */
+        /*PAGINA WHO AM I */
+        /*PAGINA WHO AM I */
+
+
+        #laucontainer {
+            width: 100vw;
+            display: grid;
+            justify-items: center;
+            background-color: white;
+            padding-bottom: 4vh;
+
+        }
+
+
+        #laucontainer article {
+
+            width: 80vw;
+            display: grid;
+            justify-items: center;
+
+        }
+
+        #laucontainer h2 {
+            margin-top: 4vh;
+            margin-bottom: 4vh;
+            font-weight: normal;
+            text-align: center;
+
+        }
+
+
+        #laucontainer p {
+            color: black;
+            font-weight: lighter;
+            line-height: 1.3;
+            font-size: 1em;
+            text-align: justify;
+        }
+
+        img[alt*="foto"] {
+            width: 65vw;
+            height: 30vh;
+            margin: 4vh;
+            box-shadow: 10px 12px 0.5rem rgba(0, 0, 0, 0.5);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* FORMULIER STIJL */
+        /* FORMULIER STIJL */
+        /* FORMULIER STIJL */
+        /* FORMULIER STIJL */
+        /* FORMULIER STIJL */
+        /* FORMULIER STIJL */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*Footer stijl*/
+        /*Footer stijl*/
+        /*Footer stijl*/
+        /*Footer stijl*/
+        /*Footer stijl*/
+
+        /*Footer stijl*/
+        /*Footer stijl*/
+
+        /*Footer stijl*/
+
+        footer {
+            height: 30vh;
+            background-color: #141413;
+            display: grid;
+
+
+        }
+
+        footer section {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        footer article:nth-child(1) ul li {
+            line-height: 2;
+        }
+
+        footer nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer li {
+            list-style: none;
+            color: white;
+            line-height: normal;
+        }
+
+
+        footer ul li:first-of-type {
+            font-weight: bold;
+            line-height: 2;
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+
+
+        }
+
+        footer article:nth-child(2) ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+
+        }
+
+
+        footer img {
+            width: 6vw;
+            height: 3vh;
+            margin: 25px;
+            margin-left: 0;
+
+        }
+
+
+        .credits {
+
+            text-align: center;
+            padding-bottom: 20px;
+
+
+
+        }
+
+
+        footer p {
+            color: white;
+            font-size: 0.8em;
+
+        }
+
+
+
+
+        /* Bron hamburger menu https://www.youtube.com/watch?v=BN6fH1nRDxA*/

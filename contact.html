@@ -1,0 +1,155 @@
+
+
+
+
+   
+   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, intital-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <title>LA Design</title>
+    <style>
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+
+    </header>
+
+    <main>
+
+
+
+
+
+        <div class="navcontainer">
+
+            <a href="index.html"><img src="images/logo3.png" alt="logo" class="logo"></a>
+
+            <nav class="nav">
+                <div class="hamburger-menu">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+
+                <ul class="nav-list">
+
+                    <li class="nav-item"> <a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"> <a href="laurie.html" class="nav-link">Who am I</a></li>
+                    <li class="nav-item"> <a href="portfolio.html" class="nav-link">My work</a></li>
+                
+                    <li class="nav-item"> <a href="contact.html" class="nav-link">Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        
+        
+        
+        <section id="laucontainer"> <article><h2>Contact</h2> <p>If you want to come in contact with me you can use the form underneath or reach out to me through one of my social platforms! </p></article>
+        
+        
+        <fieldset> 
+        <legend>Contact Details</legend>
+        <label>
+            Name: <input type="text" name="name" size="30" maxlength="100">
+
+        </label>
+        <label> Email: <input type="email" name="email" size 30 maxlength="100"</label>
+        
+  
+        </fieldset>
+          
+        <fieldset>
+         <legend>Other</legend>
+         
+        <label for="hear-about" >
+        How did you hear about me?
+</label>
+       <select name="refferer" id="hear-about">
+           <option value="Google">Google</option>
+           <option value="A friend">A friend</option>
+           <option value="Social platform">Social platform such as Instagram, Facebook or Linkedin</option>
+       </select>
+        
+             
+        <fieldset>
+           
+            <legend>Contact</legend>
+        <label for="message">
+            What is your message / question? 
+        </label>
+        
+        <textarea rows="20" cols="60" id="message"></textarea>
+      
+   <input type="submit" value="Send" />
+         
+        </fieldset>
+        </section>
+   
+    <footer>
+
+
+        <section>
+
+            <article>
+                <nav>
+
+                    <ul>
+                        <li>Menu</li>
+                        <li> <a href="index.html">Home</a></li>
+                        <li> <a href="laurie.html">Who am I</a></li>
+                        <li> <a href="portfolio.html">My work</a></li>
+                       
+                        <li> <a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </article>
+
+            <article>
+                <ul>
+                    <li>Social</li>
+                    <li> <a href="#facebook"><img src="images/facebook.png" alt="facebook"></a></li>
+                    <li> <a href="#link"><img src="images/linkedin.png" alt="linkedin"></a></li>
+                    <li> <a href="#facebook"><img src="images/insta.png" alt="insta"></a></li>
+                </ul>
+            </article>
+
+        </section>
+
+        <article class="credits">
+            <p>© 2020 LA Design | Laurie Bosman </p>
+        </article>
+
+    </footer>
+
+
+    <script src="javascript/script.js">
+    </script>
+</body>
+
+
+</html>
