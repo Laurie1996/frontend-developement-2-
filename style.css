@@ -1167,7 +1167,9 @@ footer p {
         }
 
         footer div {
+            display: flex; 
             align-self: center;
+            
         }
 
     }
