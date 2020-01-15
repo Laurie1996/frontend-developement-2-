@@ -1,8 +1,5 @@
-html {
-    scroll-behavior: smooth;
 
 
-}
 
 /*smooth scroll bron https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_smooth_scroll*/
 
@@ -314,6 +311,8 @@ video {
         padding-top: 2vmin;
 
     }
+    
+    
 
     @media (orientation: landscape) {
 
@@ -349,6 +348,19 @@ video {
     }
 }
 
+
+@media (min-width:40em) {
+     video {
+        display: inherit;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+        background-color: black;   
+    
+}
 
 
 /*einde media query */
