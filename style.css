@@ -1,4 +1,3 @@
-
 /* fade in bron https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/*/
 
 /* Bron hamburger menu https://www.youtube.com/watch?v=BN6fH1nRDxA*/
@@ -7,6 +6,7 @@
 
 /* Bron formulier uit de les https://codepen.io/joostf/pen/VKyPxk */
 
+/* bron alle webkits en keyframes https://animista.net/play/basic/rotate/rotate-hor-center */
 body {
     width: 100vw;
     animation: fadeInAnimation ease 2s animation-iteration-count: 1;
@@ -53,7 +53,7 @@ main {
 
 
 
-.navcontainer {
+main section:first-of-type {
     width: 100vw;
     position: sticky;
     top: 0;
@@ -63,7 +63,7 @@ main {
 }
 
 
-.navcontainer a {
+main section:first-of-type a {
     text-decoration: none;
     color: white;
     line-height: 1.2;
@@ -71,12 +71,12 @@ main {
 
 }
 
-.navcontainer ul li {
+main section:first-of-type ul li {
     list-style: none;
 }
 
 
-.logo {
+main section:first-of-type img {
     height: 70px;
     padding-left: 3vw;
 }
@@ -129,7 +129,8 @@ main {
     transform: rotateZ(405deg) translate(-8px, -6px);
 }
 
-.nav-item {
+
+main section:first-of-type ul li {
     list-style: none;
     padding-top: 3vmin;
     padding-bottom: 4vmin;
@@ -138,7 +139,7 @@ main {
 
 }
 
-.nav-link {
+main section:first-of-type ul li a {
     text-decoration: none;
     color: white;
     font-weight: 300;
@@ -147,8 +148,8 @@ main {
     padding: 3px 0;
 }
 
-.nav-link::before,
-.nav-link::after {
+main section:first-of-type ul li a::before,
+main section:first-of-type ul li a::after {
     content: "";
     width: 100%;
     height: 2px;
@@ -159,18 +160,18 @@ main {
     transition: transform 0.5s;
 }
 
-.nav-link::after {
+main section:first-of-type ul li a::after {
     bottom: 0;
     transform-origin: right;
 }
 
-.nav-link::before {
+main section:first-of-type ul li a::before {
     top: 0;
     transform-origin: left;
 }
 
-.nav-link:active:before,
-.nav-link:active::after {
+main section:first-of-type ul li a:active:before,
+main section:first-of-type ul li a:active::after {
     transform: scaleX(1);
 }
 
@@ -279,7 +280,7 @@ video {
         background-color: #ffffff00;
     }
 
-    .nav-list {
+    .nav ul {
         font-size: 0.8em;
         width: 70vw;
         display: flex;
@@ -290,12 +291,12 @@ video {
         right: -50%;
     }
 
-    .nav-link:hover:before,
-    .nav-link:hover::after {
+    main section:first-of-type ul li a:hover:before,
+    main section:first-of-type ul li a:hover::after {
         transform: scaleX(1);
     }
 
-    .nav-item {
+    .nav ul li {
         padding-top: 2vmin;
 
     }
@@ -314,7 +315,6 @@ video {
     .header {
         display: none;
     }
-
 
 
     .header {
@@ -367,144 +367,206 @@ video {
 }
 
 
-    /*einde media query */
-    /*einde media query */
-    /*einde media query */
-    /*einde media query */
+/*einde media query */
+/*einde media query */
+/*einde media query */
+/*einde media query */
 
 
 
 
 
 
-    #sectie1 {
+#sectie1 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sectie1 h2 {
+    font-size: 1.5em;
+    margin-top: 9vh;
+    margin-bottom: 4vh;
+    color: black;
+    font-weight: normal;
+
+
+
+}
+
+
+
+.animation {
+    margin: 0 auto;
+    background-color: white;
+    animation-name: stretch;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: once;
+    animation-fill-mode: none;
+    animation-play-state: running;
+
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(.3);
         background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
 
-    #sectie1 h2 {
-        font-size: 1.5em;
-        margin-top: 9vh;
-        margin-bottom: 4vh;
-        color: black;
-        font-weight: normal;
-
-
-
-    }
-
-
-
-    .animation {
-        margin: 0 auto;
+    100% {
+        transform: scale(1.0);
         background-color: white;
-        animation-name: stretch;
-        animation-duration: 3s;
-        animation-timing-function: ease-out;
-        animation-direction: alternate;
-        animation-iteration-count: once;
-        animation-fill-mode: none;
-        animation-play-state: running;
+
 
     }
+}
 
-    @keyframes stretch {
-        0% {
-            transform: scale(.3);
-            background-color: white;
-        }
+#sectie1 p {
+    /*text over mij*/
+    color: black;
+    font-weight: lighter;
+    line-height: 1.3;
+    font-size: 1em;
+    text-align: center;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
-        100% {
-            transform: scale(1.0);
-            background-color: white;
+}
 
-
-        }
-    }
-
-    #sectie1 p {
-        /*text over mij*/
-        color: black;
-        font-weight: lighter;
-        line-height: 1.3;
-        font-size: 1em;
-        text-align: center;
-        -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-
-    }
-
-    /* ----------------------------------------------
+/* ----------------------------------------------
  * Generated by Animista on 2020-1-15 11:36:29
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
-    /**
+/**
  * ----------------------------------------
  * animation text-focus-in
  * ----------------------------------------
  */
-    @-webkit-keyframes text-focus-in {
-        0% {
-            -webkit-filter: blur(12px);
-            filter: blur(12px);
-            opacity: 0;
-        }
-
-        100% {
-            -webkit-filter: blur(0px);
-            filter: blur(0px);
-            opacity: 1;
-        }
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
     }
 
-    @keyframes text-focus-in {
-        0% {
-            -webkit-filter: blur(12px);
-            filter: blur(12px);
-            opacity: 0;
-        }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
 
-        100% {
-            -webkit-filter: blur(0px);
-            filter: blur(0px);
-            opacity: 1;
-        }
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
     }
 
-    #sectie1 article:first-of-type {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50vw;
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+#sectie1 article:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    background-color: white;
+
+}
+
+/*button Read more */
+.read {
+    background-color: black;
+    color: white;
+    font-size: 0.8em;
+    padding: 1vmin;
+    margin: 6vh;
+    border-radius: 25px;
+
+    width: 40vw;
+    box-shadow:
+        1px 1px #6d6d6d,
+        2px 2px #949494,
+
+        -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+.read:active {
+    box-shadow:
+        1px 1px #ffffff,
+        2px 2px #ffffff,
+        4px 4px #ffffff;
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+
+
+}
+
+/*MEDIA QUERY NAAR TABLET*/
+/*MEDIA QUERY NAAR TABLET*/
+/*MEDIA QUERY NAAR TABLET*/
+/*MEDIA QUERY NAAR TABLET*/
+
+
+
+@media (min-width:40em) {
+
+    #sectie1 {
+        width: 100vw;
         background-color: white;
-
     }
 
-    /*button Read more */
+
+    #sectie1 p {
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: once;
+    }
+
+    @keyframes slidein {
+        from {
+            margin-left: 100%;
+            width: 300%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+
+
+
     .read {
         background-color: black;
         color: white;
-        font-size: 0.8em;
+        font-size: 1.0em;
+        margin: 10vh;
         padding: 1vmin;
-        margin: 6vh;
         border-radius: 25px;
-
-        width: 40vw;
+        width: 200px;
         box-shadow:
             1px 1px #6d6d6d,
             2px 2px #949494,
-
-            -webkit-transform: translateX(-3px);
+            3px 3px #949494;
+        -webkit-transform: translateX(-3px);
         transform: translateX(-3px);
     }
 
-    .read:active {
+    .read:hover {
         box-shadow:
             1px 1px #ffffff,
             2px 2px #ffffff,
@@ -514,502 +576,443 @@ video {
 
 
     }
-
-    /*MEDIA QUERY NAAR TABLET*/
-    /*MEDIA QUERY NAAR TABLET*/
-    /*MEDIA QUERY NAAR TABLET*/
-    /*MEDIA QUERY NAAR TABLET*/
-
-
-
-    @media (min-width:40em) {
-
-        #sectie1 {
-            width: 100vw;
-            background-color: white;
-        }
-
-
-        #sectie1 p {
-            animation-duration: 3s;
-            animation-name: slidein;
-            animation-iteration-count: once;
-        }
-
-        @keyframes slidein {
-            from {
-                margin-left: 100%;
-                width: 300%;
-            }
-
-            to {
-                margin-left: 0%;
-                width: 100%;
-            }
-        }
-
-
-
-        .read {
-            background-color: black;
-            color: white;
-            font-size: 1.0em;
-            margin: 10vh;
-            padding: 1vmin;
-            border-radius: 25px;
-            width: 200px;
-            box-shadow:
-                1px 1px #6d6d6d,
-                2px 2px #949494,
-                3px 3px #949494;
-            -webkit-transform: translateX(-3px);
-            transform: translateX(-3px);
-        }
-
-        .read:hover {
-            box-shadow:
-                1px 1px #ffffff,
-                2px 2px #ffffff,
-                4px 4px #ffffff;
-            -webkit-transform: translateX(4px);
-            transform: translateX(4px);
-
-
-        }
-    }
-
-
-
-
-
-
-    /*einde media query */
-    /*einde media query */
-    /*einde media query */
-    /*einde media query */
-
-
-    /*einde sectie 1 */
-
-
-
-
-    *#sectie2 {
-        /*grid met mijn werk items */
-        background-color: black;
-        display: grid;
-        padding-bottom: 14vh;
-        ;
-
-
-    }
-
-
-    .animation2 h2 {
-
-        color: white;
-        padding-top: 4vh;
-        padding-bottom: 4vh;
-        font-weight: normal;
-
-    }
-
-    .animation2 {
-        margin: 0 auto;
-        animation-name: stretch2;
-        animation-duration: 3s;
-        animation-timing-function: ease-in-ease-in-out;
-        animation-delay: 0;
-        animation-direction: alternate;
-        animation-iteration-count: once;
-        animation-fill-mode: none;
-        animation-play-state: running;
-        grid-column-start: 1;
-        grid-column-end: 3;
-
-
-    }
-
-    @keyframes stretch2 {
-        0% {
-            transform: scale(.3);
-            background-color: black;
-
-        }
-
-        100% {
-            transform: scale(1.0);
-            background-color: black;
-        }
-    }
-
-
-
-
-    #sectie2 article {
-        position: relative;
-        width: 170px;
-        height: 170px;
-        justify-self: center;
-    }
-
-
-
-
-    .overlay {
-        position: absolute;
-        background-color: white;
-        top:70%;
-        bottom:0;
-        left: 0;
-        right: 0;
-        opacity: 1;
-        box-shadow: 10px 12px 0.5rem rgba(0, 0, 0, 0.5);
-      
-
-    }
-
-    .overlay h3 {
-        position: absolute;
-        font-size: 0.9em;
-        font-weight: lighter;
-        top: 0%;
-        bottom: 20%;
-        left: 10%;
-        right: 0;
-        text-align: center;
-        color: black;
-
-
-    }
-
-#sectie2 article  a:focus {
-    outline: 2px lightblue; 
-    
 }
 
 
 
-    img[alt*="pro"] {
-        width: 170px;
-        ;
-        height: 170px;
-        ;
 
+
+
+/*einde media query */
+/*einde media query */
+/*einde media query */
+/*einde media query */
+
+
+/*einde sectie 1 */
+
+
+
+
+*#sectie2 {
+    /*grid met mijn werk items */
+    background-color: black;
+    display: grid;
+    padding-bottom: 14vh;
+    ;
+
+
+}
+
+
+.animation2 h2 {
+
+    color: white;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    font-weight: normal;
+
+}
+
+.animation2 {
+    margin: 0 auto;
+    animation-name: stretch2;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-ease-in-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: once;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+
+}
+
+@keyframes stretch2 {
+    0% {
+        transform: scale(.3);
+        background-color: black;
+
+    }
+
+    100% {
+        transform: scale(1.0);
+        background-color: black;
+    }
+}
+
+
+
+
+#sectie2 article {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    justify-self: center;
+}
+
+
+
+
+.overlay {
+    position: absolute;
+    background-color: white;
+    top: 70%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    box-shadow: 10px 12px 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+
+.overlay:hover {
+    opacity: 0.8;
+
+
+}
+
+.overlay h3 {
+    position: absolute;
+    font-size: 0.9em;
+    font-weight: lighter;
+    top: 0%;
+    bottom: 20%;
+    left: 10%;
+    right: 0;
+    text-align: center;
+    color: black;
+
+
+}
+
+#sectie2 article a:focus {
+    outline: 2px lightblue;
+
+}
+
+
+
+img[alt*="pro"] {
+    width: 170px;
+    ;
+    height: 170px;
+    ;
+
+
+}
+
+
+/*begin media query!! */
+/*begin media query!! */
+/*begin media query!! */
+/*begin media query!! */
+
+
+
+@media (min-width:40em) {
+
+
+
+    #sectie2 {
+        /*flexbox met mijn werk items */
+
+        width: 85vw;
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
     }
 
 
-    /*begin media query!! */
-    /*begin media query!! */
-    /*begin media query!! */
-    /*begin media query!! */
-
-
-
-    @media (min-width:40em) {
-
-
-
-        #sectie2 {
-            /*flexbox met mijn werk items */
-
-            width: 85vw;
-            background-color: black;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-        }
-
-
-        #sectie2 .animation2 {
-            width: 100vw;
-            text-align: center;
-        }
-
-        img[alt*="pro"] {
-            width: 200px;
-            height: 200px;
-        }
-
-
-        #sectie2 article {
-            margin: 50px;
-
-        }
-
-        #sectie2 article:hover {
-            transform: scale(1.25);
-        }
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*einde media query */
-    /*einde media query */
-    /*einde media query */
-    /*einde media query */
-
-    /*PAGINA WHO AM I */
-    /*PAGINA WHO AM I */
-    /*PAGINA WHO AM I */
-
-
-    #laucontainer {
-
+    #sectie2 .animation2 {
         width: 100vw;
-        display: grid;
-        justify-items: center;
-        background-color: white;
-        padding-bottom: 4vh;
-
-    }
-
-
-    #laucontainer article {
-
-        width: 80vw;
-        display: grid;
-        justify-items: center;
-
-    }
-
-    #laucontainer h2 {
-        margin-top: 4vh;
-        margin-bottom: 4vh;
-        font-weight: normal;
         text-align: center;
+    }
 
+    img[alt*="pro"] {
+        width: 200px;
+        height: 200px;
     }
 
 
-    #laucontainer p {
-        color: black;
-        font-weight: lighter;
-        line-height: 1.3;
-        font-size: 1em;
-        text-align: justify;
-        -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    #sectie2 article {
+        margin: 50px;
+
     }
 
-    /* ----------------------------------------------
- * Generated by Animista on 2020-1-15 11:36:29
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-    /**
- * ----------------------------------------
- * animation text-focus-in
- * ----------------------------------------
- */
-    @-webkit-keyframes text-focus-in {
-        0% {
-            -webkit-filter: blur(12px);
-            filter: blur(12px);
-            opacity: 0;
-        }
-
-        100% {
-            -webkit-filter: blur(0px);
-            filter: blur(0px);
-            opacity: 1;
-        }
-    }
-
-    @keyframes text-focus-in {
-        0% {
-            -webkit-filter: blur(12px);
-            filter: blur(12px);
-            opacity: 0;
-        }
-
-        100% {
-            -webkit-filter: blur(0px);
-            filter: blur(0px);
-            opacity: 1;
-        }
+    #sectie2 article:hover {
+        transform: scale(1.25);
     }
 
 
-    #laucontainer img[alt*="foto"] {
-        width: 300px;
-        height: 300px;
-        vh;
-        margin: 4vh;
-        box-shadow: 10px 12px 0.5rem rgba(0, 0, 0, 0.5);
+}
 
-        -webkit-animation: bounce-in-top 1.5s both;
-        animation: bounce-in-top 1.5s both;
-    }
 
-    /* ----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+/*einde media query */
+/*einde media query */
+/*einde media query */
+/*einde media query */
+
+/*PAGINA WHO AM I */
+/*PAGINA WHO AM I */
+/*PAGINA WHO AM I */
+
+
+#laucontainer {
+
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    background-color: white;
+    padding-bottom: 4vh;
+
+}
+
+
+
+#laucontainer img[alt*="foto"] {
+    width: 300px;
+    height: 300px;
+    margin: 4vh;
+    box-shadow: 10px 12px 0.5rem rgba(0, 0, 0, 0.5);
+    -webkit-animation: bounce-in-top 1.5s both;
+    animation: bounce-in-top 1.5s both;
+}
+
+/* ----------------------------------------------
  * Generated by Animista on 2020-1-15 11:39:0
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
-    /**
+/**
  * ----------------------------------------
  * animation bounce-in-top
  * ----------------------------------------
  */
-    @-webkit-keyframes bounce-in-top {
-        0% {
-            -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-            opacity: 0;
-        }
-
-        38% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-            opacity: 1;
-        }
-
-        55% {
-            -webkit-transform: translateY(-65px);
-            transform: translateY(-65px);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-        }
-
-        72% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-        }
-
-        81% {
-            -webkit-transform: translateY(-28px);
-            transform: translateY(-28px);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-        }
-
-        90% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-        }
-
-        95% {
-            -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-        }
-
-        100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-        }
+@-webkit-keyframes bounce-in-top {
+    0% {
+        -webkit-transform: translateY(-500px);
+        transform: translateY(-500px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
     }
 
-    @keyframes bounce-in-top {
-        0% {
-            -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-            opacity: 0;
-        }
+    38% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
 
-        38% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-            opacity: 1;
-        }
+    55% {
+        -webkit-transform: translateY(-65px);
+        transform: translateY(-65px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
 
-        55% {
-            -webkit-transform: translateY(-65px);
-            transform: translateY(-65px);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-        }
+    72% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
 
-        72% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-        }
+    81% {
+        -webkit-transform: translateY(-28px);
+        transform: translateY(-28px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
 
-        81% {
-            -webkit-transform: translateY(-28px);
-            transform: translateY(-28px);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-        }
+    90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
 
-        90% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-        }
+    95% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
 
-        95% {
-            -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-        }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
 
-        100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-            -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-        }
+@keyframes bounce-in-top {
+    0% {
+        -webkit-transform: translateY(-500px);
+        transform: translateY(-500px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        -webkit-transform: translateY(-65px);
+        transform: translateY(-65px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        -webkit-transform: translateY(-28px);
+        transform: translateY(-28px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+
+
+
+#laucontainer article {
+
+    width: 80vw;
+    display: grid;
+    justify-items: center;
+
+}
+
+#laucontainer h2 {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    font-weight: normal;
+    text-align: center;
+
+}
+
+
+#laucontainer p {
+    color: black;
+    font-weight: lighter;
+    line-height: 1.3;
+    font-size: 1em;
+    text-align: justify;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-1-15 11:36:29
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+@media (min-width:40em) {
+
+    #laucontainer article {
+        width: 40vw;
+
+    }
+
+    #laucontainer article p {
+
+        text-align: center;
     }
 
 
-
-
-
-
-
-    @media (min-width:40em) {
-
-        #laucontainer article {
-            width: 40vw;
-
-        }
-
-        #laucontainer article p {
-
-            text-align: center;
-        }
-
-
-    }
+}
 
 
 
@@ -1032,134 +1035,154 @@ video {
 
 
 
-    /* FORMULIER STIJL */
-    /* FORMULIER STIJL */
-    /* FORMULIER STIJL */
-    /* FORMULIER STIJL */
-    /* FORMULIER STIJL */
-    /* FORMULIER STIJL */
+/* FORMULIER STIJL */
+/* FORMULIER STIJL */
+/* FORMULIER STIJL */
+/* FORMULIER STIJL */
+/* FORMULIER STIJL */
+/* FORMULIER STIJL */
 
 
 
 
 form {
-  display:flex;
-  flex-direction:column;
-  transition: all .5s;
-  padding:1em;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+    padding: 1em;
     color: black;
-     border-radius: 25px;
-
-    
-}
-form:invalid {
-  background:#e8ebed;
-  /background: rgba(255,255,0,.8);;
-}
-fieldset {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  margin-bottom: 1em;
-  border:none;
-  transition: all .2s;
-  padding:1em;
-  background:#24DB6F;
-         border-radius: 25px;
-}
-fieldset:valid p {
-  display:block;
-  color: White;
-  background:seaGreen;
-  padding:.25em;
     border-radius: 25px;
 
 
 }
+
+form:invalid {
+    background: #e8ebed;
+    /background: rgba(255, 255, 0, .8);
+    ;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1em;
+    border: none;
+    transition: all .2s;
+    padding: 1em;
+    background: #24DB6F;
+    border-radius: 25px;
+}
+
+fieldset:valid p {
+    display: block;
+    color: White;
+    background: seaGreen;
+    padding: .25em;
+    border-radius: 25px;
+
+
+}
+
 fieldset:invalid {
-  background: rgba(255,0,0,.1);
-} 
-fieldset:invalid p{
-  display:none;
+    background: rgba(255, 0, 0, .1);
 }
+
+fieldset:invalid p {
+    display: none;
+}
+
 legend {
-  font-weight:bold;
+    font-weight: bold;
 }
+
 input {
-  border-color:#000;
-  padding:.25em;
-  font-size: 1.25em;
-  margin-bottom: 1em;
-  width:97%;
-  transition:all 2s;
-  border-radius: 25px;
+    border-color: #000;
+    padding: .25em;
+    font-size: 1.25em;
+    margin-bottom: 1em;
+    width: 97%;
+    transition: all 2s;
+    border-radius: 25px;
 
 }
+
 input:valid {
-  border-color:lightgreen;
-    
-} 
-input:invalid {
-  border-color:MediumVioletRed;
-  background: LightPink;
-}
-input:focus {
-  transform: scale(1.01, 1.01);
+    border-color: lightgreen;
 
 }
+
+input:invalid {
+    border-color: purple;
+    background: LightPink;
+}
+
+input:focus {
+    transform: scale(1.01, 1.01);
+
+}
+
 input:focus + p.tooltip {
-  display:block;
-  opacity:1;
-  margin-top:-1.3em;
+    display: block;
+    opacity: 1;
+    margin-top: -1.3em;
 }
+
 input:disabled {
-  border-color:#eee;
-  background-color: #f9f9f9;
+    border-color: #eee;
+    background-color: #f9f9f9;
 }
+
 input::placeholder {
-  color:rgba(0,0,0,.25);
-  font-style:italic;
+    color: rgba(0, 0, 0, .25);
+    font-style: italic;
 }
+
 form button {
-  font-size: 1.25em;
-  flex:0 0 2em;
-  transition:all .2s 1s;
-  opacity:0;
-  width:100%;
+    font-size: 1.25em;
+    flex: 0 0 2em;
+    transition: all .2s 1s;
+    opacity: 0;
+    width: 100%;
 }
+
 form:valid button {
-  opacity:1
+    opacity: 1
 }
+
 form button:focus {
-  transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
 }
+
 form button:hover {
-  transition: 0.5s;
-    background-color:#24DB6F ;
+    transition: 0.5s;
+    background-color: #24DB6F;
 }
-.tooltip { 
-  z-index:2;
-  color:DodgerBlue;
-  padding:.25em;
-  background:AliceBlue;
-  border: 1px solid currentColor;
-  font-style:italic;
-  transition:all .2s;
-  margin-top:-3em;
-  opacity:0;
+
+.tooltip {
+    z-index: 2;
+    color: DodgerBlue;
+    padding: .25em;
+    background: AliceBlue;
+    border: 1px solid currentColor;
+    font-style: italic;
+    transition: all .2s;
+    margin-top: -3em;
+    opacity: 0;
 }
 
 select {
-    font-size:1em;
+    font-size: 1em;
     width: 400px;
     height: 40px;
-  
-     
-} 
+
+
+}
+
 textarea {
-    width: 100%;
+    width: 80%;
     height: 20vh;
-    font-size:1em;
+    font-size: 1em;
     border-radius: 10px;
 
 }
@@ -1167,21 +1190,98 @@ textarea {
 
 
 
-@media (min-width:40em) { 
-    
+@media (min-width:50em) {
+
+
+
     select {
-    font-size:1em;
-    width: 400px;
-    height: 40px;
-}
+        font-size: 1em;
+        width: 30vw;
+        height: 40px;
+    }
 
     textarea {
-    font-family: 'Open Sans', sans-serif; 
-    font-size:1em;
-    border-radius: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1em;
+        border-radius: 10px;
+
+    }
 
 }
-    
+
+
+
+/* message send pagina aan de hand van de "send" button op het formulier */
+
+#send {
+    width: 100vw;
+    background-color: white;
+    display: grid;
+}
+
+#send h1 {
+    text-align: center;
+    padding: 2em;
+    font-size: 2em;
+    -webkit-animation: rotate-hor-center 4s infinite both;
+    animation: rotate-hor-center 4s infinite both;
+}
+
+#send h1:hover {
+    text-shadow: 0px 0px 0 rgb(208, 138, 28), 1px 1px 0 rgb(165, 123, 26), 2px 2px 0 rgb(242, 185, 100), 3px 3px 0 rgb(227, 167, 187), 4px 4px 0 rgb(182, 129, 63), 5px 5px 0 rgb(161, 117, 50), 6px 6px 0 rgb(144, 103, 39), 7px 7px 0 rgb(130, 91, 31), 8px 8px 0 rgb(120, 83, 25), 9px 9px 0 rgb(108, 73, 20), 10px 10px 0 rgb(93, 63, 13), 11px 11px 0 rgb(60, 54, 12), 12px 12px 0 rgb(63, 41, 8), 13px 13px 0
+}
+
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-1-16 13:34:5
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation rotate-hor-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes rotate-hor-center {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+
+    100% {
+        -webkit-transform: rotateX(-360deg);
+        transform: rotateX(-360deg);
+    }
+}
+
+@keyframes rotate-hor-center {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+
+    100% {
+        -webkit-transform: rotateX(-360deg);
+        transform: rotateX(-360deg);
+    }
+}
+
+
+
+#send article {
+    justify-self: center;
+    text-align: center;
+    margin-bottom: 4vh;
+
+}
+
+#send article a {
+    text-decoration: none;
+    color: white;
+
 }
 
 
@@ -1195,141 +1295,141 @@ textarea {
 
 
 
+/*Footer stijl*/
+/*Footer stijl*/
+/*Footer stijl*/
+/*Footer stijl*/
+/*Footer stijl*/
+
+/*Footer stijl*/
+/*Footer stijl*/
+
+/*Footer stijl*/
+
+footer {
+    width: 100vw;
+    height: 30vh;
+    background-color: #141413;
 
 
+}
+
+footer section {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul {
+    text-align: left;
+}
+
+footer article:nth-child(1) ul li {
+    line-height: 2;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: white;
+}
+
+footer li {
+    list-style: none;
+    color: white;
+    line-height: normal;
+}
 
 
+footer ul li:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+
+footer article:nth-child(2) ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
 
 
-    /*Footer stijl*/
-    /*Footer stijl*/
-    /*Footer stijl*/
-    /*Footer stijl*/
-    /*Footer stijl*/
+footer img {
+    width: 35px;
+    height: 35px;
+    margin: 25px;
+    margin-left: 0;
 
-    /*Footer stijl*/
-    /*Footer stijl*/
+}
 
-    /*Footer stijl*/
+footer div {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+footer p {
+    color: white;
+    font-size: 0.8em;
+
+}
+
+
+@media (orientation: landscape) {
 
     footer {
-        width: 100vw;
-        height: 30vh;
+        height: 60vh;
         background-color: #141413;
-
-
-    }
-
-    footer section {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    footer ul {
-        text-align: left;
-    }
-
-    footer article:nth-child(1) ul li {
-        line-height: 2;
-    }
-
-    footer nav a {
-        text-decoration: none;
-        color: white;
-    }
-
-    footer li {
-        list-style: none;
-        color: white;
-        line-height: normal;
     }
 
 
-    footer ul li:first-of-type {
-        font-weight: bold;
-        line-height: 2;
-        grid-column-start: 1;
-        grid-column-end: 4;
 
-    }
-
-    footer article:nth-child(2) ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-
-    }
-
-
-    footer img {
-        width: 35px;
-        height: 35px;
-        margin: 25px;
-        margin-left: 0;
-
-    }
-
-    footer div {
-        text-align: center;
-        padding-bottom: 20px;
-    }
-
-    footer p {
-        color: white;
-        font-size: 0.8em;
-
-    }
-
-
-    @media (orientation: landscape) {
+    @media (min-width:40em) {
 
         footer {
-            height: 60vh;
-            background-color: #141413;
-        }
-
-
-
-        @media (min-width:40em) {
-
-            footer {
-                height: 30vh;
-                width: 100vw;
-                display: flex;
-                justify-content: center;
-                align-self: center;
-
-            }
-
-            footer section {
-                width: 50vw;
-                display: flex;
-                align-self: center;
-            }
-
-            footer ul {
-                padding: 0;
-                text-align: left;
-            }
-
-
-            footer img {
-                width: 35px;
-                height: 35px;
-                margin: 25px;
-                margin-left: 0;
-            }
-
-            footer section article:first-of-type {
-                align-self: center;
-                padding-bottom: 10px;
-            }
-
-            footer div {
-                
-                align-self: center;
-            }
+            height: 30vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-self: center;
 
         }
 
-        
+        footer section {
+            width: 50vw;
+            display: flex;
+            align-self: center;
+        }
 
+        footer ul {
+            padding: 0;
+            text-align: left;
+        }
+
+
+        footer img {
+            width: 35px;
+            height: 35px;
+            margin: 25px;
+            margin-left: 0;
+        }
+
+        footer section article:first-of-type {
+            align-self: center;
+            padding-bottom: 10px;
+        }
+
+        footer div {
+
+            align-self: center;
+        }
+
+        footer section article a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        footer article img:hover {
+            transform: scale(1.25);
+        }
+
+    }
