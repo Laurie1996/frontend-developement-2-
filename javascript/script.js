@@ -8,9 +8,10 @@ menuIcon.addEventListener("click", () => {
     navbar.classList.toggle("change");
 });
 
+$('textarea').autoResize();
 
 
-/*javascript om animatie te activeren tijdens scrollen */ 
+/*javascript om animatie te activeren tijdens scrollen *
 
 /*var element = document.getElementsByClassName('animation');
 var elementHeight = element.clientHeight;

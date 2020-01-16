@@ -44,11 +44,12 @@
 
 
 
+
         <div class="navcontainer">
 
-            <a href="index.html"><img src="images/logo3.png" alt="logo" class="logo"></a>
+            <a href="index.html"><img src="images/logo3.png" alt="LA Design" class="logo"></a>
 
-            <nav>
+            <nav class="nav">
                 <div class="hamburger-menu">
                     <div class="line line-1"></div>
                     <div class="line line-2"></div>
@@ -60,55 +61,65 @@
                     <li class="nav-item"> <a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"> <a href="laurie.html" class="nav-link">Who am I</a></li>
                     <li class="nav-item"> <a href="portfolio.html" class="nav-link">My work</a></li>
-                
+
                     <li class="nav-item"> <a href="contact.html" class="nav-link">Contact</a></li>
 
                 </ul>
             </nav>
         </div>
-        
-        
-        
-        <section id="laucontainer"> <article><h2>Contact</h2> <p>If you want to come in contact with me you can use the form underneath or reach out to me through one of my social platforms! </p></article>
-        
-        
-        <fieldset> 
-        <legend>Contact Details</legend>
-        <label>
-            Name: <input type="text" name="name" size="30" maxlength="100" required="required">
 
-        </label>
-        <label> Email: <input type="email" name="email" size 30 maxlength="100"</label>
+
+
+        <section id="laucontainer">
+            <article>
+                <h2>Contact</h2>
+                <p>If you want to come in contact with me you can use the form underneath or reach out to me through one of my social platforms! </p>
+            </article>
+
+            <!---Bron voor het formulier https://codepen.io/joostf/pen/VKyPxk -->
+
+            <form action="contact">
+                <fieldset>
+                    <legend>Personal Info</legend>
+                    <label for="name">First name</label>
+                    <input id="name" required type="text">
+
+                    <label for="surname">Last name</label>
+                    <input id="surname" required>
+                 
+
+                    <label for="mail">E-mail</label>
+                    <input id="mail" type="email" required value="@">
+   <p>Well done!</p>
+
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Reason</legend>
+                    <label for="Reden voor Contact"></label>
+                   <select name="contact"  required>
+                        <option disabled value=""selected>choose one of the following</option>
+                        <option value="vraag">You have a question</option>
+                        <option value="werk">You would like to work with me</option>
+                        <option value="anders">Different reason</option>
+                    </select>
+                  
+                </fieldset>
+                <fieldset>
+                    <legend>Message</legend>
+                    <label for="Message"></label>
+                    <textarea placeholder="Write your message here!" id="message" required="required"></textarea>
+                </fieldset>
+                <button type="button">Send</button>
+
+            </form>
         
-  
-        </fieldset>
-          
-        <fieldset>
-         <legend>Other</legend>
-         
-        <label for="hear-about" >
-        How did you hear about me?
-</label>
-       <select name="refferer" id="hear-about" required="required">
-           <option value="A friend">A friend</option>
-           <option value="Social platform">Social platform such as Instagram, Facebook or Linkedin</option>
-       </select>
-        
-             
-        <fieldset>
-           
-            <legend>Contact</legend>
-        <label for="message">
-            What is your message / question? 
-        </label>
-        
-        <textarea rows="20" cols="60" id="message" required="required"></textarea>
-      
-            <label><input type="submit" value="Send"><a href="send.html"></a> </label>
-         
-        </fieldset>
+
         </section>
-   
+
+        
+    </main>
     <footer>
 
 
@@ -122,7 +133,7 @@
                         <li> <a href="index.html">Home</a></li>
                         <li> <a href="laurie.html">Who am I</a></li>
                         <li> <a href="portfolio.html">My work</a></li>
-                       
+
                         <li> <a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
@@ -148,7 +159,4 @@
 
     <script src="javascript/script.js">
     </script>
-</body>
-
-
-</html>
+</body></html>

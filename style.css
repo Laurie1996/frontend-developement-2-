@@ -1,11 +1,11 @@
-/*smooth scroll bron https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_smooth_scroll*/
 
-/* scrollbar https://css-tricks.com/almanac/properties/s/scrollbar/ */
 /* fade in bron https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/*/
 
-/* Bron cv tijdlijn https://codepen.io/tutsplus/pen/QNeJgR */
-
 /* Bron hamburger menu https://www.youtube.com/watch?v=BN6fH1nRDxA*/
+
+/*bron: formulier select drop down https://stackoverflow.com/questions/49296598/style-invalid-select-using-invalid */
+
+/* Bron formulier uit de les https://codepen.io/joostf/pen/VKyPxk */
 
 body {
     width: 100vw;
@@ -19,10 +19,7 @@ body {
 
 }
 
-a.navlink:visited {
-    color: darkgoldenrod;
-    /* Werktniet vraag waarom niet! */
-}
+
 
 
 @keyframes fadeInAnimation {
@@ -662,28 +659,34 @@ video {
     .overlay {
         position: absolute;
         background-color: white;
-        top: 70%;
-        bottom: 10%;
+        top:70%;
+        bottom:0;
         left: 0;
         right: 0;
         opacity: 1;
         box-shadow: 10px 12px 0.5rem rgba(0, 0, 0, 0.5);
+      
 
     }
 
-    .overlay a h3 {
+    .overlay h3 {
         position: absolute;
         font-size: 0.9em;
         font-weight: lighter;
-        top: -15%;
-        bottom: 10%;
-        left: 0;
+        top: 0%;
+        bottom: 20%;
+        left: 10%;
         right: 0;
         text-align: center;
         color: black;
 
 
     }
+
+#sectie2 article  a:focus {
+    outline: 2px lightblue; 
+    
+}
 
 
 
@@ -1039,12 +1042,147 @@ video {
 
 
 
+form {
+  display:flex;
+  flex-direction:column;
+  transition: all .5s;
+  padding:1em;
+    color: black;
+     border-radius: 25px;
+
+    
+}
+form:invalid {
+  background:#e8ebed;
+  /background: rgba(255,255,0,.8);;
+}
+fieldset {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  margin-bottom: 1em;
+  border:none;
+  transition: all .2s;
+  padding:1em;
+  background:#24DB6F;
+         border-radius: 25px;
+}
+fieldset:valid p {
+  display:block;
+  color: White;
+  background:seaGreen;
+  padding:.25em;
+    border-radius: 25px;
+
+
+}
+fieldset:invalid {
+  background: rgba(255,0,0,.1);
+} 
+fieldset:invalid p{
+  display:none;
+}
+legend {
+  font-weight:bold;
+}
+input {
+  border-color:#000;
+  padding:.25em;
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  width:97%;
+  transition:all 2s;
+  border-radius: 25px;
+
+}
+input:valid {
+  border-color:lightgreen;
+    
+} 
+input:invalid {
+  border-color:MediumVioletRed;
+  background: LightPink;
+}
+input:focus {
+  transform: scale(1.01, 1.01);
+
+}
+input:focus + p.tooltip {
+  display:block;
+  opacity:1;
+  margin-top:-1.3em;
+}
+input:disabled {
+  border-color:#eee;
+  background-color: #f9f9f9;
+}
+input::placeholder {
+  color:rgba(0,0,0,.25);
+  font-style:italic;
+}
+form button {
+  font-size: 1.25em;
+  flex:0 0 2em;
+  transition:all .2s 1s;
+  opacity:0;
+  width:100%;
+}
+form:valid button {
+  opacity:1
+}
+form button:focus {
+  transform: scale(1.1, 1.1);
+}
+form button:hover {
+  transition: 0.5s;
+    background-color:#24DB6F ;
+}
+.tooltip { 
+  z-index:2;
+  color:DodgerBlue;
+  padding:.25em;
+  background:AliceBlue;
+  border: 1px solid currentColor;
+  font-style:italic;
+  transition:all .2s;
+  margin-top:-3em;
+  opacity:0;
+}
+
+select {
+    font-size:1em;
+    width: 400px;
+    height: 40px;
+  
+     
+} 
+textarea {
+    width: 100%;
+    height: 20vh;
+    font-size:1em;
+    border-radius: 10px;
+
+}
 
 
 
 
+@media (min-width:40em) { 
+    
+    select {
+    font-size:1em;
+    width: 400px;
+    height: 40px;
+}
 
+    textarea {
+    font-family: 'Open Sans', sans-serif; 
+    font-size:1em;
+    border-radius: 10px;
 
+}
+    
+}
 
 
 
@@ -1192,3 +1330,6 @@ video {
             }
 
         }
+
+        
+
