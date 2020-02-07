@@ -18,21 +18,21 @@ body {
     background-color: black;
 
 }
+      body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
 
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
 
-
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-
+            100% {
+                opacity: 1;
+            }
+        }
 
 main {
     position: relative;
@@ -191,8 +191,6 @@ video {
     height: 50vh;
     opacity: 0.7;
 }
-
-
 
 
 .header svg {
@@ -398,7 +396,7 @@ video {
 
 
 
-.animation {
+.animation:hover {
     margin: 0 auto;
     background-color: white;
     animation-name: stretch;
@@ -425,6 +423,7 @@ video {
     }
 }
 
+
 #sectie1 p {
     /*text over mij*/
     color: black;
@@ -432,9 +431,6 @@ video {
     line-height: 1.3;
     font-size: 1em;
     text-align: center;
-    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-
 }
 
 /* ----------------------------------------------
@@ -614,7 +610,7 @@ video {
 
 }
 
-.animation2 {
+.animation2:hover {
     margin: 0 auto;
     animation-name: stretch2;
     animation-duration: 3s;
