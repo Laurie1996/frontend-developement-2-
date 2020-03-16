@@ -1262,7 +1262,7 @@ img[alt*="studievereniging"] {
 
 /*PROJECTEN Ninja Warrior  */
 #ninja {
-  width: 50vw;
+  width: 70vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
@@ -1277,14 +1277,14 @@ img[alt*="studievereniging"] {
 #ninja p {
   margin-left: 10px;
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 2;
 }
 
 @media (min-width: 40em) {
   #ninja {
     width: 70vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
 
@@ -1303,22 +1303,22 @@ img[alt*="studievereniging"] {
 }
 
 img[alt*="logo ninja"] {
+
   width: 200px;
   margin-top: 7vh;
-  align-items: start;
+
 }
 
 img[alt*="small"] {
   width: 50px;
-  align-items: start;
+
 }
 
 img[alt*="screen"] {
   width: 200px;
   border-style: solid;
   border-width: 0.5px;
-  align-items: start;
-  margin: 20px;
+  margin: 10px;
 }
 
 #ninja p {
