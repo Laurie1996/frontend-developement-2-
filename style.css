@@ -167,7 +167,7 @@ main section:first-of-type ul li a:active::after {
 
 .header img:first-of-type {
   width: 100vw;
-  height: 50vh;
+  height: 100vh;
   -webkit-filter: saturate(200%);
            filter: saturate(200%);
 
@@ -1337,6 +1337,12 @@ img[alt*="screen"] {
     grid-column-end: 4;
     color: white;
   }
+
+  #ninja p {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
 
   #ninja p:last-of-type {
     grid-column-start: 1;
